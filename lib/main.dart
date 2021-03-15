@@ -37,7 +37,6 @@ class _MyAppState extends State<MyApp> {
             i = i * 10;
           }
           _result = nBiner;
-        } else if (_valueTo == "Hexadecimal") {
         } else if (_valueTo == "Octal") {
           int nOctal = 0;
           int i = 1;
@@ -60,7 +59,6 @@ class _MyAppState extends State<MyApp> {
             i = i * 2;
           }
           _result = nDecimal;
-        } else if (_valueTo == "Hexadecimal") {
         } else if (_valueTo == "Octal") {
           int nDecimal = 0;
           int nOctal = 0;
@@ -80,10 +78,6 @@ class _MyAppState extends State<MyApp> {
           }
           _result = nOctal;
         }
-      } else if (_valueFrom == "Hexadecimal") {
-        if (_valueTo == "Binary") {
-        } else if (_valueTo == "Decimal") {
-        } else if (_valueTo == "Octal") {}
       } else if (_valueFrom == "Octal") {
         if (_valueTo == "Binary") {
           int nDecimal = 0;
@@ -103,7 +97,6 @@ class _MyAppState extends State<MyApp> {
             i = i * 10;
           }
           _result = nBiner;
-        } else if (_valueTo == "Hexadecimal") {
         } else if (_valueTo == "Decimal") {
           int nDecimal = 0;
           int last;
@@ -137,7 +130,6 @@ class _MyAppState extends State<MyApp> {
   var listString = [
     "Binary",
     "Decimal",
-    "Hexadecimal",
     "Octal",
   ];
 
