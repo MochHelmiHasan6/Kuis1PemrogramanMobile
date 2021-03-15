@@ -11,3 +11,6 @@
 
 ## Hasil Konversi Biner ke Oktal
 ![4](images/BinaryToOctal.jpeg)
+
+## Hasil Konversi Oktal ke Biner
+![5](images/OctalToBinary.jpeg)
