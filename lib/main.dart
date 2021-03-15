@@ -38,7 +38,16 @@ class _MyAppState extends State<MyApp> {
           }
           _result = nBiner;
         } else if (_valueTo == "Hexadecimal") {
-        } else if (_valueTo == "Octal") {}
+        } else if (_valueTo == "Octal") {
+          int nOctal = 0;
+          int i = 1;
+          while (nBilangan > 0) {
+            nOctal = nOctal + (nBilangan % 8) * i;
+            nBilangan = (nBilangan / 8).floor();
+            i = i * 10;
+          }
+          _result = nOctal;
+        }
       } else if (_valueFrom == "Binary") {
         if (_valueTo == "Decimal") {
           int nDecimal = 0;
