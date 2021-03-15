@@ -68,18 +68,35 @@ class _MyAppState extends State<MyApp> {
         } else if (_valueTo == "Octal") {}
       } else if (_valueFrom == "Octal") {
         if (_valueTo == "Binary") {
+          int nDecimal = 0;
+          int last;
+          int nBiner = 0;
+          int i = 1;
+          while (nBilangan != 0) {
+            last = nBilangan % 10;
+            nBilangan = (nBilangan / 10).floor();
+            nDecimal += last * i;
+            i = i * 8;
+          }
+          i = 1;
+          while (nDecimal > 0) {
+            nBiner = nBiner + (nDecimal % 2) * i;
+            nDecimal = (nDecimal / 2).floor();
+            i = i * 10;
+          }
+          _result = nBiner;
         } else if (_valueTo == "Hexadecimal") {
         } else if (_valueTo == "Decimal") {
-          int nOctal = 0;
+          int nDecimal = 0;
           int last;
           int i = 1;
           while (nBilangan > 0) {
             last = nBilangan % 10;
             nBilangan = (nBilangan / 10).floor();
-            nOctal += last * i;
+            nDecimal += last * i;
             i = i * 8;
           }
-          _result = nOctal;
+          _result = nDecimal;
         }
       }
       listViewItem.insert(0, "$_valueTo : $_result");
