@@ -61,7 +61,25 @@ class _MyAppState extends State<MyApp> {
           }
           _result = nDecimal;
         } else if (_valueTo == "Hexadecimal") {
-        } else if (_valueTo == "Octal") {}
+        } else if (_valueTo == "Octal") {
+          int nDecimal = 0;
+          int nOctal = 0;
+          int last;
+          int i = 1;
+          while (nBilangan != 0) {
+            last = nBilangan % 10;
+            nBilangan = (nBilangan / 10).floor();
+            nDecimal += last * i;
+            i = i * 2;
+          }
+          i = 1;
+          while (nDecimal > 0) {
+            nOctal = nOctal + (nDecimal % 8) * i;
+            nDecimal = (nDecimal / 8).floor();
+            i = i * 10;
+          }
+          _result = nOctal;
+        }
       } else if (_valueFrom == "Hexadecimal") {
         if (_valueTo == "Binary") {
         } else if (_valueTo == "Decimal") {
