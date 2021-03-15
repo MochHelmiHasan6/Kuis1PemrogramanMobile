@@ -5,3 +5,6 @@
 
 ## Hasil Konversi Desimal ke Oktal
 ![2](images/DecimalToOctal.jpeg)
+
+## Hasil Konversi Biner ke Desimal
+![3](images/BinaryToDecimal.jpeg)
