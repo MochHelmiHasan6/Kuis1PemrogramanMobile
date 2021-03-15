@@ -18,8 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   TextEditingController etDecimal = new TextEditingController();
 
-  int nDecimal = 0;
-  int i = 1;
+  int nBilangan = 0;
   String _valueFrom = "Decimal";
   String _valueTo = "Binary";
   int _result = 0;
@@ -27,12 +26,14 @@ class _MyAppState extends State<MyApp> {
 
   void _konversiBilangan() {
     setState(() {
-      nDecimal = int.parse(etDecimal.text);
+      nBilangan = int.parse(etDecimal.text);
       if (_valueFrom == "Decimal") {
         if (_valueTo == "Binary") {
           int nBiner = 0;
-          while (nDecimal > 0) {
-            nBiner = (nDecimal % 2) * i;
+          int i = 1;
+          while (nBilangan > 0) {
+            nBiner = nBiner + (nBilangan % 2) * i;
+            nBilangan = (nBilangan / 2).floor();
             i = i * 10;
           }
           _result = nBiner;
