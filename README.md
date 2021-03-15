@@ -8,3 +8,6 @@
 
 ## Hasil Konversi Biner ke Desimal
 ![3](images/BinaryToDecimal.jpeg)
+
+## Hasil Konversi Biner ke Oktal
+![4](images/BinaryToOctal.jpeg)
